@@ -6,3 +6,5 @@ Simple machine learning project with Regression analysis using Uber/Lyft taxi fa
 ### Model deployment
 This machine learning model had been develop on herokuapp
 https://predict-your-taxi-fare.herokuapp.com/
+
+Ps. Final Project 1 - Studi Independen Kampus Merdeka Hacktiv8
