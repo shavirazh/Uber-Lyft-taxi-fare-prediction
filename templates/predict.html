@@ -1,0 +1,18 @@
+<html>
+
+<link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+
+<body background="{{url_for('static', filename='img/background.png')}}">
+    <div class="description">
+        <center>
+            <p class="title-keterangan">Hasil Prediksi</p>
+
+            <p class="result">Perkiraan harga untuk Anda adalah ${{prediction}}</p>
+
+            <br><br>
+            <a href='/' class="back">Kembali ke Form Pengisian</a>
+        </center>
+    </div>
+</body>
+
+</html>

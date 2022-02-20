@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+    <title>Uber/Lyft Taxi Fare Prediction</title>
+</head>
+
+<body background="{{url_for('static', filename='img/background.png')}}">
+    <center>
+        <div class="container">
+            <h1>Prediksi Harga Uber dan Lyft</h1>
+            <hr>
+            <form action="{{ url_for('predict') }}" method="post">
+                <fieldset class="form-field">
+                    <p class="form-text">Waktu Keberangkatan (0-23)</p>
+                    <input class="form-input" type="text" name="hour" tabindex="1" required="required" autofocus />
+                </fieldset>
+                <fieldset class="form-field">
+                    <p class="form-text">Jarak Tempuh (KM)</p>
+                    <input class="form-input" type="text" name="distance" tabindex="2" required="required" />
+                </fieldset>
+                <fieldset class="form-field">
+                    <p class="form-text">Lonjakan Harga</p>
+                    <input class="form-input" type="text" name="surge" tabindex="3" required="required" />
+                </fieldset>
+                <fieldset class="form-field">
+                    <p class="form-text">Layanan</p>
+                    <select class="form-select" name="types" tabindex="4" >
+                        <option selected value="">Pilih --</option>
+                        <option value="0">Uber</option>
+                        <option value="1">Lyft</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-field">
+                    <p class="form-text">Jenis Layanan</p>
+                    <select class="form-select" name="ride" tabindex="5">
+                        <option selected value="">Pilih --</option>
+                        <option value="0">Uber - UberX</option>
+                        <option value="1">Uber - UberXL</option>
+                        <option value="2">Uber - Black</option>
+                        <option value="3">Uber - BlackSUV</option>
+                        <option value="4">Uber - WAV</option>
+                        <option value="5">Uber - UberPool</option>
+                        <option value="6">Uber - Taxi</option>
+                        <option value="7">Uber - Shared</option>
+                        <option value="8">Lyft - Lyft</option>
+                        <option value="9">Lyft - LyftXL</option>
+                        <option value="10">Lyft - Lux</option>
+                        <option value="11">Lyft - LuxBlack</option>
+                        <option value="12">Lyft - LuxBlackXL</option>
+                    </select>
+                </fieldset>
+                <fieldset class="form-field">
+                    <button class="button button1">Prediksi</button>
+                </fieldset>
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
